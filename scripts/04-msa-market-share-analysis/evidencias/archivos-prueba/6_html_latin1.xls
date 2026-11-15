@@ -1,0 +1,26 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Exportadores</th>
+      <th>Valor importado en 2023</th>
+      <th>Valor importado en 2024</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mundo</td>
+      <td>30</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>Perú</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>México</td>
+      <td>20</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>

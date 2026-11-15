@@ -1,0 +1,308 @@
+
+################ ARCHIVO: 1_espanol.xlsx (detección automática)
+Ruta del archivo de TradeMap: archivos/1_espanol.xlsx
+Columnas disponibles: ['Exportadores', 'Valor importado en 2020', 'Valor importado en 2021', 'Valor importado en 2022', 'Valor importado en 2023', 'Valor importado en 2024', 'Cantidad importada en 2024', 'Unidad de cantidad']
+
+Primeras 5 filas:
+  Exportadores  ... Unidad de cantidad
+0        Mundo  ...          Toneladas
+1       Brasil  ...          Toneladas
+2     Colombia  ...          Toneladas
+3      Vietnam  ...          Toneladas
+4    Indonesia  ...          Toneladas
+
+[5 rows x 8 columns]
+
+✅ Detección automática: países = "Exportadores"
+
+Columnas de años encontradas: ['Valor importado en 2020', 'Valor importado en 2021', 'Valor importado en 2022', 'Valor importado en 2023', 'Valor importado en 2024']
+
+Datos procesados: 50 filas
+Países únicos: 10
+Años disponibles: [2020, 2021, 2022, 2023, 2024]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2020          Brasil           853169
+1  2020        Colombia           581331
+2  2020         Vietnam           631552
+3  2020       Indonesia           812631
+4  2020         Etiopía           541548
+5  2020            Perú           709332
+6  2020        Honduras           758603
+7  2020           India           241426
+8  2020          Uganda            97201
+9  2020          México           305141
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 2_ingles_con_titulo.xlsx (detección automática)
+Ruta del archivo de TradeMap: archivos/2_ingles_con_titulo.xlsx
+ℹ️  Se omitieron 3 fila(s) de título antes de las cabeceras.
+Columnas disponibles: ['Exporters', 'Imported value in 2020', 'Imported value in 2021', 'Imported value in 2022', 'Imported value in 2023', 'Imported value in 2024']
+
+Primeras 5 filas:
+   Exporters  ... Imported value in 2024
+0      World  ...                4261543
+1     Brazil  ...                 633118
+2   Colombia  ...                 357074
+3   Viet Nam  ...                 596759
+4  Indonesia  ...                 558456
+
+[5 rows x 6 columns]
+
+✅ Detección automática: países = "Exporters"
+
+Columnas de años encontradas: ['Imported value in 2020', 'Imported value in 2021', 'Imported value in 2022', 'Imported value in 2023', 'Imported value in 2024']
+
+Datos procesados: 50 filas
+Países únicos: 10
+Años disponibles: [2020, 2021, 2022, 2023, 2024]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2020          Brazil           276329
+1  2020        Colombia           472342
+2  2020        Viet Nam           372469
+3  2020       Indonesia           260387
+4  2020        Ethiopia           894263
+5  2020            Peru            60024
+6  2020        Honduras           132613
+7  2020           India           213541
+8  2020          Uganda           873665
+9  2020          Mexico           638227
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 3_html_disfrazado.xls (detección automática)
+Ruta del archivo de TradeMap: archivos/3_html_disfrazado.xls
+Columnas disponibles: ['Importadores', 'Valor exportado en 2019', 'Valor exportado en 2020', 'Valor exportado en 2021', 'Valor exportado en 2022', 'Valor exportado en 2023']
+
+Primeras 5 filas:
+  Importadores  ... Valor exportado en 2023
+0        Mundo  ...                 6097868
+1       Brasil  ...                  768772
+2     Colombia  ...                  768313
+3      Vietnam  ...                  460293
+4    Indonesia  ...                  853205
+
+[5 rows x 6 columns]
+
+✅ Detección automática: países = "Importadores"
+
+Columnas de años encontradas: ['Valor exportado en 2019', 'Valor exportado en 2020', 'Valor exportado en 2021', 'Valor exportado en 2022', 'Valor exportado en 2023']
+
+Datos procesados: 50 filas
+Países únicos: 10
+Años disponibles: [2019, 2020, 2021, 2022, 2023]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2019          Brasil           241803
+1  2019        Colombia           177669
+2  2019         Vietnam           374345
+3  2019       Indonesia           743887
+4  2019         Etiopía           390848
+5  2019            Perú           372529
+6  2019        Honduras           539077
+7  2019           India           881935
+8  2019          Uganda           383406
+9  2019          México           551492
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 4_solo_anios.xlsx (detección automática)
+Ruta del archivo de TradeMap: archivos/4_solo_anios.xlsx
+Columnas disponibles: ['País', '2021', '2022', '2023', '2024']
+
+Primeras 5 filas:
+        País     2021     2022     2023     2024
+0      Mundo  4513826  4790974  5379628  4099847
+1     Brasil   528421   874081   656362   429726
+2   Colombia   213593   595335    82348   688626
+3    Vietnam   687685   545935   874006    96833
+4  Indonesia   838719   534240   794785    71417
+
+✅ Detección automática: países = "País"
+
+Columnas de años encontradas: ['2021', '2022', '2023', '2024']
+
+Datos procesados: 40 filas
+Países únicos: 10
+Años disponibles: [2021, 2022, 2023, 2024]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2021          Brasil           528421
+1  2021        Colombia           213593
+2  2021         Vietnam           687685
+3  2021       Indonesia           838719
+4  2021         Etiopía           258628
+5  2021            Perú           519477
+6  2021        Honduras            91791
+7  2021           India           203469
+8  2021          Uganda           370595
+9  2021          México           801448
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 6_html_latin1.xls (detección automática)
+Ruta del archivo de TradeMap: archivos/6_html_latin1.xls
+Columnas disponibles: ['Exportadores', 'Valor importado en 2023', 'Valor importado en 2024']
+
+Primeras 5 filas:
+  Exportadores Valor importado en 2023 Valor importado en 2024
+0        Mundo                      30                      33
+1         Perú                      10                      11
+2       México                      20                      22
+
+✅ Detección automática: países = "Exportadores"
+
+Columnas de años encontradas: ['Valor importado en 2023', 'Valor importado en 2024']
+
+Datos procesados: 4 filas
+Países únicos: 2
+Años disponibles: [2023, 2024]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2023            Perú               10
+1  2023          México               20
+2  2024            Perú               11
+3  2024          México               22
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 5_ambiguo.xlsx (asignación manual; entradas del usuario: 9 | 0, 2-5 | 0, 2,4,6)
+Ruta del archivo de TradeMap: archivos/5_ambiguo.xlsx
+Columnas disponibles: ['Nombre', 'Grupo', 'Valor importado en 2020', 'Valor exportado en 2020', 'Valor importado en 2021', 'Valor exportado en 2021', 'Valor importado en 2022', 'Valor exportado en 2022']
+
+Primeras 5 filas:
+      Nombre Grupo  ... Valor importado en 2022 Valor exportado en 2022
+0     BRASIL     A  ...                 5001993                 3243386
+1   COLOMBIA     B  ...                   62130                  242459
+2    VIETNAM     A  ...                  786249                  213970
+3  INDONESIA     B  ...                  584192                  218742
+4    ETIOPÍA     A  ...                  462540                  823474
+
+[5 rows x 8 columns]
+⚠️  Se encontraron varios grupos de columnas con valores por año: "Valor importado en 2020"…; "Valor exportado en 2020"…. Indique cuál usar.
+⚠️  La columna "Nombre" podría ser la de países, pero no hay certeza suficiente.
+
+🔎 La detección automática no fue concluyente: elija las columnas manualmente.
+
+📋 Columnas disponibles en el archivo:
+   N.º  Cabecera                                      Ejemplo
+     0  Nombre                                        BRASIL
+     1  Grupo                                         A
+     2  Valor importado en 2020                       4689965
+     3  Valor exportado en 2020                       4859103
+     4  Valor importado en 2021                       5471413
+     5  Valor exportado en 2021                       6438380
+     6  Valor importado en 2022                       5001993
+     7  Valor exportado en 2022                       3243386
+
+✍️  Asignación manual (escriba el número o el nombre de la columna):
+  Columna de PAÍSES / socios:   ❌ No existe la columna número 9. Intente de nuevo.
+
+✍️  Asignación manual (escriba el número o el nombre de la columna):
+  Columna de PAÍSES / socios:   Columnas de VALOR por año (ej. 1-5 o 1,2,3):   ❌ Hay más de una columna para el/los año(s) [2020, 2021]. Elija una sola columna por año.
+  Intente de nuevo.
+
+✍️  Asignación manual (escriba el número o el nombre de la columna):
+  Columna de PAÍSES / socios:   Columnas de VALOR por año (ej. 1-5 o 1,2,3): 
+Columnas de años encontradas: ['Valor importado en 2020', 'Valor importado en 2021', 'Valor importado en 2022']
+
+Datos procesados: 33 filas
+Países únicos: 11
+Años disponibles: [2020, 2021, 2022]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2020          BRASIL          4689965
+1  2020        COLOMBIA           403433
+2  2020         VIETNAM           142229
+3  2020       INDONESIA           609096
+4  2020         ETIOPÍA           668701
+5  2020            PERÚ           413987
+6  2020        HONDURAS           117170
+7  2020           INDIA           495179
+8  2020          UGANDA           418346
+9  2020          MÉXICO           791887
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO: 5_ambiguo.xlsx (validación; entradas del usuario: 0, 1 (año 2020) | 0, 2,4,6)
+Ruta del archivo de TradeMap: archivos/5_ambiguo.xlsx
+Columnas disponibles: ['Nombre', 'Grupo', 'Valor importado en 2020', 'Valor exportado en 2020', 'Valor importado en 2021', 'Valor exportado en 2021', 'Valor importado en 2022', 'Valor exportado en 2022']
+
+Primeras 5 filas:
+      Nombre Grupo  ... Valor importado en 2022 Valor exportado en 2022
+0     BRASIL     A  ...                 5001993                 3243386
+1   COLOMBIA     B  ...                   62130                  242459
+2    VIETNAM     A  ...                  786249                  213970
+3  INDONESIA     B  ...                  584192                  218742
+4    ETIOPÍA     A  ...                  462540                  823474
+
+[5 rows x 8 columns]
+⚠️  Se encontraron varios grupos de columnas con valores por año: "Valor importado en 2020"…; "Valor exportado en 2020"…. Indique cuál usar.
+⚠️  La columna "Nombre" podría ser la de países, pero no hay certeza suficiente.
+
+🔎 La detección automática no fue concluyente: elija las columnas manualmente.
+
+📋 Columnas disponibles en el archivo:
+   N.º  Cabecera                                      Ejemplo
+     0  Nombre                                        BRASIL
+     1  Grupo                                         A
+     2  Valor importado en 2020                       4689965
+     3  Valor exportado en 2020                       4859103
+     4  Valor importado en 2021                       5471413
+     5  Valor exportado en 2021                       6438380
+     6  Valor importado en 2022                       5001993
+     7  Valor exportado en 2022                       3243386
+
+✍️  Asignación manual (escriba el número o el nombre de la columna):
+  Columna de PAÍSES / socios:   Columnas de VALOR por año (ej. 1-5 o 1,2,3):   La cabecera "Grupo" no indica el año. Escriba el año:   ❌ La columna "Grupo" no contiene valores numéricos (solo 0% de sus datos son números).
+  Intente de nuevo.
+
+✍️  Asignación manual (escriba el número o el nombre de la columna):
+  Columna de PAÍSES / socios:   Columnas de VALOR por año (ej. 1-5 o 1,2,3): 
+Columnas de años encontradas: ['Valor importado en 2020', 'Valor importado en 2021', 'Valor importado en 2022']
+
+Datos procesados: 33 filas
+Países únicos: 11
+Años disponibles: [2020, 2021, 2022]
+
+Primeros datos procesados:
+   year partner_country  trade_value_usd
+0  2020          BRASIL          4689965
+1  2020        COLOMBIA           403433
+2  2020         VIETNAM           142229
+3  2020       INDONESIA           609096
+4  2020         ETIOPÍA           668701
+5  2020            PERÚ           413987
+6  2020        HONDURAS           117170
+7  2020           INDIA           495179
+8  2020          UGANDA           418346
+9  2020          MÉXICO           791887
+
+--- Compatibilidad con secciones posteriores ---
+Columnas de df: ['year', 'partner_country', 'trade_value_usd'] | dtypes: {'year': 'int64', 'partner_country': 'str', 'trade_value_usd': 'int64'}
+4.3 ✓  4.4 ✓ (tabla 1 encontrada: True )  4.5 ✓  4.6 ✓ ( True )  4.7 ✓ ( True )
+
+################ ARCHIVO NO VÁLIDO: malo.xlsx (texto plano)
+  File "<string>", line 83, in leer_archivo_trademap
+ValueError: ❌ No se pudo leer el archivo. Verifique que sea un Excel (.xlsx o .xls) descargado de TradeMap.
+Detalle: read_excel: Excel file format cannot be determined, you must specify an engine manually. | read_html: `Import html5lib` failed.  Use pip or conda to install the html5lib package.

@@ -37,7 +37,7 @@ Los colores estaban escritos directamente en el código (`skyblue`, `lightcoral`
 ### Solución implementada
 - **Definición centralizada:** el diccionario `PALETAS` reúne todas las paletas. Para añadir o cambiar una, solo se edita ese diccionario.
 - **Interfaz interactiva (Google Colab):** botones de opción con las tres paletas y una vista previa de sus colores. Hay además una opción personalizada que muestra un campo de texto para pegar CSS solo cuando se elige, y un botón **Generar gráficos**. Si `ipywidgets` no está disponible, se usa un menú de texto equivalente.
-- **Aplicación automática:** cada país recibe un color fijo, el mismo en los cuatro gráficos (líneas, marcadores y barras). Títulos, ejes, etiquetas, cuadrícula y línea de referencia del CAGR usan el color de texto de la paleta.
+- **Aplicación automática:** cada país recibe un color fijo, el mismo en los cuatro gráficos (líneas, marcadores y barras). Títulos, ejes, etiquetas, cuadrícula, contorno de barras y línea de referencia del CAGR usan el color de texto de la paleta, y el fondo de los gráficos es un tono muy claro de ese mismo color. Los años del eje X se muestran como números enteros.
 - **Sin cambios en los cálculos:** se usan las mismas variables de los apartados anteriores (`pivot_share`, `pivot_value`, `market_evolution_top`, `growth_data`, `top_countries`).
 
 ### Paletas predeterminadas
@@ -66,7 +66,7 @@ Reglas de procesamiento:
 3. Se aceptan `#RGB`, `#RGBA`, `#RRGGBB` y `#RRGGBBAA`. La transparencia se ignora y se avisa.
 4. Se eliminan colores repetidos (Coolors repite la paleta en varios formatos).
 5. Se necesitan **al menos 2 colores válidos**. Si hay menos colores que países, se completan con variaciones más claras u oscuras de los mismos colores y se avisa. Si hay más, se usan los primeros.
-6. El color de texto es el más oscuro de la paleta. Si todos son claros, se usa un gris oscuro para que se lea, y se avisa.
+6. El color de texto es el más oscuro de la paleta. Si todos son claros, se usa una versión oscurecida de ese mismo color, y se avisa. No queda ningún color fijo ajeno a la paleta.
 
 ### Mensajes de validación
 | Entrada | Resultado |
@@ -82,13 +82,16 @@ Cuando hay un error (❌) no se generan gráficos y se pide corregir el CSS.
 ---
 
 ## 3. Verificación realizada
+
+Las evidencias completas (archivos de prueba, gráficos y registros de consola) están en la carpeta [evidencias](evidencias/README.md).
 Se probó el flujo completo 4.2 → 4.7 con archivos de prueba de estructura TradeMap y **datos ficticios**:
 - Cabeceras en español (`Exportadores` / `Valor importado en …`), con columnas de cantidad y unidad que debían ignorarse.
 - Cabeceras en inglés (`Exporters` / `Imported value in …`) con filas de título encima.
 - Archivo `.xls` en formato HTML (`Importadores` / `Valor exportado en …`), en UTF-8 y en Latin-1.
 - Cabeceras con solo el año (`País` / `2021`, `2022`…).
 - Archivo ambiguo (dos grupos de valores y columnas de texto sin nombre claro), resuelto con asignación manual, incluidas entradas erróneas.
-- Las tres paletas, dos paletas CSS personalizadas, cuatro entradas CSS no válidas y el caso sin `growth_data` (un solo año de datos).
+- Las tres paletas, tres paletas CSS personalizadas (incluida una de colores claros), cuatro entradas CSS no válidas y el caso sin `growth_data` (un solo año de datos).
+- La interfaz (selector, campo CSS que aparece y desaparece, botón y salida) mediante una simulación de sus eventos.
 
 En todos los casos `df` conservó las columnas `year`, `partner_country` y `trade_value_usd`, y los apartados 4.3, 4.4, 4.6 y 4.7 se ejecutaron sin modificaciones.
 

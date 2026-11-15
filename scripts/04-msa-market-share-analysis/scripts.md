@@ -468,6 +468,7 @@ for year in sorted(df['year'].unique()):
 # =====================================================================
 import re
 import matplotlib.colors as mcolors
+from matplotlib.ticker import MaxNLocator
 from IPython.display import display, HTML
 
 # ---------------------------------------------------------------------
@@ -610,10 +611,12 @@ def construir_paleta_personalizada(colores, n_necesarios):
                       + ', '.join(muy_claros) + '. Las barras llevarán un contorno para distinguirlas.')
 
     texto = min(colores, key=_luminancia)
-    if _luminancia(texto) > 0.5:
-        avisos.append(f'Todos los colores son claros; para que los textos se lean '
-                      f'se usará {PALETAS["Ejecutivo Clásico"]["texto"]} en etiquetas.')
-        texto = PALETAS['Ejecutivo Clásico']['texto']
+    if _luminancia(texto) > 0.35:
+        original = texto
+        while _luminancia(texto) > 0.35:
+            texto = _variar(texto, -0.25)
+        avisos.append(f'Los colores de la paleta son claros: para que los textos se lean '
+                      f'se usará {texto}, una versión oscura de {original}.')
     return {'descripcion': 'Paleta suministrada por el usuario.',
             'series': series, 'texto': texto}, avisos
 
@@ -640,7 +643,11 @@ def generar_graficos(paleta):
     def colores_de(paises):
         return [colores_pais.get(p, texto) for p in paises]
 
+    fondo = _variar(texto, 0.94)   # fondo derivado de la paleta (tono muy claro)
+
     def estilo(ax, titulo, ylabel):
+        ax.set_facecolor(fondo)
+        ax.grid(True, color=texto, alpha=0.15)
         ax.set_title(titulo, fontsize=14, fontweight='bold', color=texto)
         ax.set_ylabel(ylabel, color=texto)
         ax.tick_params(colors=texto)
@@ -655,6 +662,7 @@ def generar_graficos(paleta):
     pivot_share.plot(kind='line', marker='o', ax=axes[0,0], linewidth=2, markersize=6,
                      color=colores_de(pivot_share.columns))
     estilo(axes[0,0], 'Market Share Evolution (%)', 'Market Share (%)')
+    axes[0,0].xaxis.set_major_locator(MaxNLocator(integer=True))
     axes[0,0].grid(True, alpha=0.3, color=texto)
     axes[0,0].legend(bbox_to_anchor=(1.05, 1), loc='upper left', labelcolor=texto)
 
@@ -672,6 +680,7 @@ def generar_graficos(paleta):
     (pivot_value/1000).plot(kind='line', marker='s', ax=axes[0,1], linewidth=2, markersize=6,
                             color=colores_de(pivot_value.columns))
     estilo(axes[0,1], 'Trade Value Evolution (Million USD)', 'Million USD')
+    axes[0,1].xaxis.set_major_locator(MaxNLocator(integer=True))
     axes[0,1].grid(True, alpha=0.3, color=texto)
     axes[0,1].legend(labelcolor=texto)
 

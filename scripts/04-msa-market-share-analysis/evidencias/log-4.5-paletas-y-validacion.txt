@@ -1,0 +1,49 @@
+
+===== ejecutivo_clasico =====
+✅ Paleta aplicada: Ejecutivo Clásico
+
+===== comercio_global =====
+✅ Paleta aplicada: Comercio Global
+
+===== corporativo_contemporaneo =====
+✅ Paleta aplicada: Corporativo Contemporáneo
+
+===== personalizada_coolors =====
+⚠️  La paleta tiene 5 colores y hay 8 países: se generaron 3 variaciones de sus mismos colores.
+⚠️  Colores muy claros que pueden verse poco sobre el fondo: #FDF0D5. Las barras llevarán un contorno para distinguirlas.
+✅ Paleta aplicada: Personalizada (pegar código CSS)
+
+===== personalizada_root =====
+⚠️  Se usaron los primeros 8 colores de 9 (uno por país).
+✅ Paleta aplicada: Personalizada (pegar código CSS)
+
+===== personalizada_clara =====
+⚠️  La paleta tiene 4 colores y hay 8 países: se generaron 4 variaciones de sus mismos colores.
+⚠️  Colores muy claros que pueden verse poco sobre el fondo: #FFE5EC. Las barras llevarán un contorno para distinguirlas.
+⚠️  Los colores de la paleta son claros: para que los textos se lean se usará #8D3E52, una versión oscura de #FB6F92.
+✅ Paleta aplicada: Personalizada (pegar código CSS)
+
+===== invalido_sin_colores =====
+❌ El código no contiene colores HEX válidos (formato esperado: #RRGGBB, p. ej. --azul: #1D70A2;).
+Corrija el código CSS y vuelva a intentarlo. No se generaron gráficos.
+
+===== invalido_hex_malos =====
+⚠️  Se ignoraron códigos HEX no válidos: #12345, #GGHHII
+❌ Solo se encontró 1 color válido; se necesitan al menos 2.
+Corrija el código CSS y vuelva a intentarlo. No se generaron gráficos.
+
+===== invalido_vacio =====
+❌ No se pegó ningún código CSS.
+Corrija el código CSS y vuelva a intentarlo. No se generaron gráficos.
+
+===== intento_codigo =====
+⚠️  Se ignoraron códigos HEX no válidos: #zzz
+❌ El código no contiene colores HEX válidos (formato esperado: #RRGGBB, p. ej. --azul: #1D70A2;).
+Corrija el código CSS y vuelva a intentarlo. No se generaron gráficos.
+
+Gráficos generados: 6
+
+===== sin_cagr =====
+✅ Paleta aplicada: Comercio Global
+
+Datos sin modificar: True True
