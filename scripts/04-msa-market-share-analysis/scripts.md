@@ -699,6 +699,8 @@ def generar_graficos(paleta):
     # 4. CAGR con valores
     if 'growth_data' in globals():
         serie_cagr = growth_data.set_index('partner_country')['cagr']
+        # Un CAGR infinito (valor 0 en el año inicial) se trata como vacío
+        serie_cagr = serie_cagr.replace([np.inf, -np.inf], np.nan)
         bars2 = serie_cagr.plot(kind='bar', ax=axes[1,1], color=colores_de(serie_cagr.index),
                                 edgecolor=texto, linewidth=0.6)
         axes[1,1].axhline(y=0, color=texto, linestyle='-', alpha=0.4)
